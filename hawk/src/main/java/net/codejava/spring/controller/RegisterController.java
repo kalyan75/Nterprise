@@ -20,7 +20,7 @@ public class RegisterController {
 		User userForm = new User();		
 		model.put("userForm", userForm);
 		
-		List<String> professionList = new ArrayList<>();
+		List<String> professionList = new ArrayList<String>();
 		professionList.add("Developer");
 		professionList.add("Designer");
 		professionList.add("IT Manager");
