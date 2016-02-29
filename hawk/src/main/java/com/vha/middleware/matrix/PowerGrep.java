@@ -15,7 +15,7 @@ public class PowerGrep {
 			ArrayList<String> talendHosts = talendServers();
 			//String command = "ls -lrt /tmp";
 			//String command = "awk -- 'NR > 20'   /opt/talend/Talend-Runtime-V5.3.1/log/tesb.log";
-			String command = "grep 'Exception:'   /opt/talend/Talend-Runtime-V5.3.1/log/*.log";
+			String command = "grep 'Exception:'   /opt/application/log/*.log";
 			ExecutorService executor = Executors.newFixedThreadPool(talendHosts.size());
             
 			for (Iterator<String> iterator = talendHosts.iterator(); iterator.hasNext();) {
@@ -36,10 +36,10 @@ public class PowerGrep {
 
 	private static ArrayList<String> talendServers() {
 		ArrayList<String> talendHosts = new ArrayList<String>();
-		talendHosts.add("tj1-51");
-		talendHosts.add("tj2-51");
-		talendHosts.add("tr1-51");
-		talendHosts.add("tr2-51");
+		talendHosts.add("server1");
+		talendHosts.add("server2");
+		talendHosts.add("server3");
+		talendHosts.add("server4");
 		return talendHosts;
 	}
 
