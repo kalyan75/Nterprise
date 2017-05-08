@@ -1,4 +1,4 @@
-package com.vha.middleware.matrix.bean;
+package com.nterpise.hawk.bean;
 
 public class Command {
 	private String command;

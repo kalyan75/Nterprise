@@ -1,9 +1,15 @@
-package com.vha.middleware.matrix;
+package com.nterpise.hawk.engine;
 
 import org.jasypt.encryption.pbe.StandardPBEStringEncryptor;
 
 import com.jcraft.jsch.UserInfo;
 
+
+/**
+ * 
+ * @author Kalyan
+ *
+ */
 public class MyUserInfo implements UserInfo {
 
 	private String userName;
@@ -21,7 +27,7 @@ public class MyUserInfo implements UserInfo {
 
 	public String getPassword() {
 		// TODO Auto-generated method stub
-		return "Kalyan77";
+		return password;
 	}
 
 	public boolean promptPassphrase(String arg0) {
@@ -45,15 +51,6 @@ public class MyUserInfo implements UserInfo {
 	}
 
 	public static void main(String arg[]) {
-		StandardPBEStringEncryptor encryptor = new StandardPBEStringEncryptor();
-		encryptor.setPassword("J@ycr@ftR0ck$");
-		String encryptedText = encryptor.encrypt("Kalyan77");
-		System.out.println("Encrypted text is: " + encryptedText);
-
-		StandardPBEStringEncryptor decryptor = new StandardPBEStringEncryptor();
-		decryptor.setPassword("J@ycr@ftR0ck$");
-		String decryptedText = decryptor.decrypt(encryptedText);
-		System.out.println("Decrypted text is: " + decryptedText);
 
 	}
 

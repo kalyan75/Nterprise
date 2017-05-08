@@ -1,4 +1,4 @@
-package com.vha.middleware.matrix.controller;
+package com.nterpise.hawk.controller;
 
 
 import org.springframework.stereotype.Controller;
@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.vha.middleware.matrix.bean.SearchResult;
+import com.nterpise.hawk.bean.SearchResult;
 
 @Controller
 public class MatrixController {

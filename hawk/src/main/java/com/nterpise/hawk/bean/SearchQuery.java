@@ -1,7 +1,11 @@
-package com.vha.middleware.matrix.bean;
+package com.nterpise.hawk.bean;
 
 
-
+/**
+ * 
+ * @author a527712
+ *
+ */
 
 
 public class SearchQuery {
