@@ -14,5 +14,17 @@ public class EncryptionUtil  {
 		return decryptedText;
 	}
 
+	public static String encrypt (String pass, String passPhrase) {
+		StandardPBEStringEncryptor decryptor = new StandardPBEStringEncryptor();
+		decryptor.setPassword(passPhrase);
+		String decryptedText = decryptor.encrypt(pass);
+		System.out.println(decryptedText);
+		return decryptedText;
+	}
+	
+	public static void main (String arg[]) {
+		
+		
+	}
 
 }

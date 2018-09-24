@@ -19,27 +19,16 @@ public class ShellExecutor implements Runnable {
 	private String command;
 
 	
-	
-	static {
-		InputStream input = null;
-		try {
-			input = Thread.currentThread().getContextClassLoader().getResourceAsStream("hawk.properties");
-			Properties props = new Properties();
-			props.load(input);
-			USER = props.getProperty("hawk.username");
-			PASSPHRASE = props.getProperty("hawk.passphrase");
-			PASS = props.getProperty("hawk.encrypted.password");
-			// _config.load(input);
-		} catch (Exception ex) {
 
-		}
-	}
 	
 
 	// ThreadLocal<String> cache = new Thread
-	public ShellExecutor(String host, String command) {
+	public ShellExecutor(String host, String command, String user, String passphrase, String password) {
 		this.host = host;
 		this.command = command;
+		USER = user;
+		PASSPHRASE = passphrase;
+		PASS = password;
 	}
 
 	public void run() {
